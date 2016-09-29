@@ -1,0 +1,17 @@
+<section id="content">
+    <div class="container">
+        <div class="block-header">
+            <h2>Angular 2 By Examples</h2>
+        </div>
+
+        <div class="col-lg-3 col-md-3 col-sm-4">
+
+            <ul class="nav nav-pills nav-stacked">
+                <li *ngFor="let route of routes"><a [routerLink]="[route.path]">{{route.data.readable}}</a></li>
+            </ul>
+
+        </div>
+
+        <router-outlet></router-outlet>
+    </div>
+</section>
