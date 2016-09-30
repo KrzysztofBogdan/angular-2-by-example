@@ -5,9 +5,10 @@ import {AppComponent} from "./app.component";
 import {HomepageComponent} from "./homepage.component";
 import {EventModule} from "./event-manager/event-manager.module";
 import {FormModule} from "./form/form.module";
+import {BananaInABoxModule} from "./banana-in-a-box/banana-in-a-box.module";
 
 @NgModule({
-    imports: [BrowserModule, routing, EventModule, FormModule],
+    imports: [BrowserModule, routing, EventModule, FormModule, BananaInABoxModule],
     declarations: [AppComponent, HomepageComponent],
     bootstrap: [AppComponent]
 })
