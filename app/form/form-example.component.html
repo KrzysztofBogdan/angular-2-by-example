@@ -1,0 +1,150 @@
+<div class="container">
+    <div class="block-header">
+        <h2>Form</h2>
+    </div>
+
+    <div class="row">
+
+        <div class="col-lg-6">
+
+            <div class="well">
+
+                <form #form="ngForm" class="form-horizontal" novalidate>
+
+                    <fieldset>
+
+                        <legend>Legend</legend>
+
+                        <div class="form-group">
+
+                            <label for="email" class="col-lg-2 control-label">Email</label>
+
+                            <div class="col-lg-10">
+                                <input [(ngModel)]="model.email" name="email" class="form-control" id="email" placeholder="Email" type="text">
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="password" class="col-lg-2 control-label">Password</label>
+
+                            <div class="col-lg-10">
+
+                                <input [(ngModel)]="model.password" name="password" class="form-control" id="password" placeholder="Password" type="password">
+
+                                <div class="checkbox">
+
+                                    <label>
+
+                                        <input [(ngModel)]="model.checkbox" name="checkbox" type="checkbox"> Checkbox
+
+                                    </label>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="textArea" class="col-lg-2 control-label">Textarea</label>
+
+                            <div class="col-lg-10">
+
+                                <textarea [(ngModel)]="model.textarea" name="textarea" class="form-control" rows="3" id="textArea"></textarea>
+
+                                <span class="help-block">
+                                    A longer block of help text that breaks onto a new line and may extend beyond one line.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label class="col-lg-2 control-label">Radios</label>
+
+                            <div class="col-lg-10">
+
+                                <div class="radio">
+
+                                    <label>
+                                        <input [(ngModel)]="model.optionsRadios" name="optionsRadios" id="optionsRadios1" value="option1" checked="" type="radio">
+                                        Option one is this
+                                    </label>
+
+                                </div>
+
+                                <div class="radio">
+
+                                    <label>
+                                        <input [(ngModel)]="model.optionsRadios" name="optionsRadios" id="optionsRadios2" value="option2" type="radio">
+                                        Option two can be something else
+                                    </label>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="selectSingle" class="col-lg-2 control-label">Selects</label>
+
+                            <div class="col-lg-10">
+
+                                <select [(ngModel)]="model.selectSingle" name="selectSingle" class="form-control" id="selectSingle">
+                                    <option value="zxc1">1</option>
+                                    <option value="zxc2">2</option>
+                                    <option value="zxc3">3</option>
+                                    <option value="zxc4">4</option>
+                                    <option value="zxc5">5</option>
+                                </select>
+
+                                <br>
+
+                                <select [(ngModel)]="model.selectMultiple" name="selectMultiple" class="form-control" multiple>
+                                    <option value="abc1">1</option>
+                                    <option value="abc2">2</option>
+                                    <option value="abc3">3</option>
+                                    <option value="abc4">4</option>
+                                    <option value="abc5">5</option>
+                                </select>
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <div class="col-lg-10 col-lg-offset-2">
+
+                                <button type="reset" class="btn btn-default">Cancel</button>
+
+                                <button type="submit" class="btn btn-primary">Submit</button>
+
+                            </div>
+
+                        </div>
+
+                    </fieldset>
+
+                </form>
+
+            </div> <!-- well -->
+
+        </div> <!-- col -->
+
+    </div> <!-- .row -->
+
+    <div class="row">
+        <div class="col-lg-6">
+            <blockquote>
+                <p>{{ model | json }}</p>
+            </blockquote>
+        </div>
+    </div>
+
+</div>
