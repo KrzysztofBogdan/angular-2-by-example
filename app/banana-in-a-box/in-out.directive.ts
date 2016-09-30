@@ -1,4 +1,4 @@
-import {EventEmitter, Input, Output, Directive, NgZone} from "@angular/core";
+import {EventEmitter, Input, Output, Directive} from "@angular/core";
 
 @Directive({
     selector: "eg-in-out"
@@ -10,8 +10,6 @@ export class InOutComponent {
 
     @Output("inOutChange")
     inOutChange: EventEmitter<any> = new EventEmitter<any>();
-
-    constructor(private zone: NgZone) {}
 
     @Input("emitValue")
     set emitValue(val: any) {
